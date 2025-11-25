@@ -1,6 +1,6 @@
 require("lazy").setup({
-  require("kickstart.plugins.nightfox"),
 	"NMAC427/guess-indent.nvim",
+  require("kickstart.plugins.tokyonight"),
   require("kickstart.plugins.autopairs"),
   require("kickstart.plugins.telescope"),
 	require("kickstart.plugins.lspconfig"),
