@@ -8,6 +8,7 @@ Clone the repo into `~/dotfiles/` (or any directory), then run:
 
 ```sh
 stow nvim
+stow tmux
 ```
 
 Each package corresponds to a folder containing the files to be symlinked.
