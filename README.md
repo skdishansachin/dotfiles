@@ -33,7 +33,7 @@ I use Monospace from GitHub.
 
 ```sh
 cd ~/Downloads/
-curl -oL monospace-frozen-v1-301.zip https://github.com/githubnext/monaspace/releases/download/v1.301/monaspace-frozen-v1.301.zip
+curl -Lo monospace-frozen-v1-301.zip https://github.com/githubnext/monaspace/releases/download/v1.301/monaspace-frozen-v1.301.zip
 unzip monospace-frozen-v1.301.zip
 mv monospace-frozen-v1.301 monospace
 mv monospace ~/.local/share/fonts/
