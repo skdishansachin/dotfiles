@@ -24,7 +24,7 @@ These are the common packages I used over the years.
 ```sh
 sudo apt update
 sudo apt upgrade
-sudo apt install git curl tmux jq stow neovim zoxide fzf ripgrep starship
+sudo apt install git curl tmux jq stow neovim zoxide fzf ripgrep starship poppler-utils
 ```
 
 ### Fonts
