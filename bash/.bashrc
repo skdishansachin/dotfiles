@@ -118,4 +118,7 @@ if command -v zoxide >/dev/null 2>&1; then
 eval "$(zoxide init bash)"
 fi
 
-. "$HOME/.cargo/env"
+if command -v cargo &> /dev/null; then
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+fi
+
