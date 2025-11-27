@@ -8,7 +8,8 @@ require("lazy").setup({
 	require("kickstart.plugins.mini"),
   require("kickstart.plugins.treesitter"),
 	require("kickstart.plugins.neo-tree"),
-  require("kickstart.plugins.multicursor")
+  require("kickstart.plugins.multicursor"),
+  require("kickstart.plugins.rustaceanvim")
 }, {
 	ui = {
 		icons = vim.g.have_nerd_font and {}
