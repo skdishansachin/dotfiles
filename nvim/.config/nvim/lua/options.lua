@@ -6,7 +6,7 @@ vim.o.mouse = "a"
 
 -- Clipboard (set asynchronously)
 vim.schedule(function()
-	vim.o.clipboard = "unnamedplus"
+  vim.o.clipboard = "unnamedplus"
 end)
 
 -- Editing behavior

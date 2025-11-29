@@ -1,22 +1,22 @@
 require("lazy").setup({
-	defaults ={
-		git = { timeout = 600 }
-	},
-	"NMAC427/guess-indent.nvim",
+  defaults = {
+    git = { timeout = 600 },
+  },
+  "NMAC427/guess-indent.nvim",
   require("kickstart.plugins.tokyonight"),
   require("kickstart.plugins.autopairs"),
   require("kickstart.plugins.telescope"),
-	require("kickstart.plugins.lspconfig"),
-	require("kickstart.plugins.blink-cmp"),
-	require("kickstart.plugins.mini"),
+  require("kickstart.plugins.lspconfig"),
+  require("kickstart.plugins.blink-cmp"),
+  require("kickstart.plugins.mini"),
   require("kickstart.plugins.treesitter"),
-	require("kickstart.plugins.neo-tree"),
+  require("kickstart.plugins.neo-tree"),
   require("kickstart.plugins.multicursor"),
   require("kickstart.plugins.rustaceanvim"),
-  require("kickstart.plugins.comments")
+  require("kickstart.plugins.comments"),
 }, {
-	ui = {
-		icons = vim.g.have_nerd_font and {}
+  ui = {
+    icons = vim.g.have_nerd_font and {},
   },
 })
 
