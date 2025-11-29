@@ -8,7 +8,7 @@ return {
   },
   lazy = false,
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<C-n>', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
 		close_if_last_window = true,
@@ -16,7 +16,7 @@ return {
       window = {
 				position = 'right',
         mappings = {
-          ['\\'] = 'close_window',
+          ['<C-n>'] = 'close_window',
         },
       },
     },
