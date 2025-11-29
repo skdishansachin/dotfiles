@@ -118,9 +118,7 @@ if command -v zoxide >/dev/null 2>&1; then
 eval "$(zoxide init bash)"
 fi
 
-if command -v cargo &> /dev/null; then
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
-fi
 
 test -r '/home/skdishansachin/.opam/opam-init/init.sh' && . '/home/skdishansachin/.opam/opam-init/init.sh' > /dev/null 2> /dev/null || true
 
