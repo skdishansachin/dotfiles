@@ -172,14 +172,7 @@ return {
         severity_sort = true,
         float = { border = "rounded", source = "if_many", max_width = 80, wrap = true },
         underline = { severity = vim.diagnostic.severity.ERROR },
-        signs = vim.g.have_nerd_font and {
-          text = {
-            [vim.diagnostic.severity.ERROR] = "󰅚 ",
-            [vim.diagnostic.severity.WARN] = "󰀪 ",
-            [vim.diagnostic.severity.INFO] = "󰋽 ",
-            [vim.diagnostic.severity.HINT] = "󰌶 ",
-          },
-        } or {},
+        signs = {},
         virtual_text = {
           source = "if_many",
           spacing = 2,
