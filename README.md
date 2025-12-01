@@ -19,25 +19,6 @@ Each package corresponds to a folder containing the files to be symlinked.
 
 ## Setting up a new machine?
 
-### Packages
+### Intall
 
-These are the common packages I used over the years.
-
-```sh
-sudo apt update
-sudo apt upgrade
-sudo apt install git curl tmux jq stow neovim zoxide fzf ripgrep starship poppler-utils
-```
-
-### Fonts
-
-I use Monospace from GitHub.
-
-```sh
-cd ~/Downloads/
-curl -Lo monospace-frozen-v1-301.zip https://github.com/githubnext/monaspace/releases/download/v1.301/monaspace-frozen-v1.301.zip
-unzip monospace-frozen-v1.301.zip
-mv monospace-frozen-v1.301 monospace
-mv monospace ~/.local/share/fonts/
-fc-cache -f
-```
+You can just run the `./install.sh` script to install the other softwares and font I use.
