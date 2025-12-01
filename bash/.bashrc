@@ -123,3 +123,7 @@ fi
 test -r '/home/skdishansachin/.opam/opam-init/init.sh' && . '/home/skdishansachin/.opam/opam-init/init.sh' > /dev/null 2> /dev/null || true
 
 eval $(opam env --switch=default)
+
+# export PATH=$PATH:$HOME/personal/hugo/v0.152.2;
+
+export PATH=$PATH:$HOME/.local/bin
