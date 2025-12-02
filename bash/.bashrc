@@ -126,4 +126,6 @@ eval $(opam env --switch=default)
 
 # export PATH=$PATH:$HOME/personal/hugo/v0.152.2;
 
+export PATH=$PATH:$HOME/personal/go/v1.25.4/bin;
+
 export PATH=$PATH:$HOME/.local/bin
