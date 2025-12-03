@@ -3,7 +3,5 @@ if [[ $- == *i* && -s ~/.bashrc ]]; then
 fi
 
 
-if command -v cargo &> /dev/null; then
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
-fi
 
