@@ -122,6 +122,6 @@ export PATH=$PATH:$HOME/personal/go/v1.25.4/bin;
 
 export PATH=$PATH:$HOME/.local/bin
 
-PS1='\[\e[95;1m\]\u\[\e[0m\] on \[\e[96;1m\]\w\n\[\e[92m\]❯ \[\e[0m\]'
+PS1='\[\e[96;1m\]\w\[\e[0m\]$(branch=$(git branch --show-current 2>/dev/null); [ -n "$branch" ] && echo " on \[\e[91;1m\]($branch)\[\e[0m\]")\n\[\e[92m\]❯ \[\e[0m\]'
 
 eval "$(zoxide init bash)"
