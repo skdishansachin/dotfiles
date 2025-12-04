@@ -110,10 +110,6 @@ fi
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# eval "$(starship init bash)"
-
-eval "$(zoxide init bash)"
-
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 test -r '/home/skdishansachin/.opam/opam-init/init.sh' && . '/home/skdishansachin/.opam/opam-init/init.sh' > /dev/null 2> /dev/null || true
@@ -125,3 +121,7 @@ eval $(opam env --switch=default)
 export PATH=$PATH:$HOME/personal/go/v1.25.4/bin;
 
 export PATH=$PATH:$HOME/.local/bin
+
+PS1='\[\e[95;1m\]\u\[\e[0m\] on \[\e[96;1m\]\w\n\[\e[92m\]❯ \[\e[0m\]'
+
+eval "$(zoxide init bash)"
