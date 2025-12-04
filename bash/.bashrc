@@ -110,7 +110,7 @@ fi
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
 
 eval "$(zoxide init bash)"
 
