@@ -52,5 +52,9 @@ mv "monaspace-frozen-v1.301" "$HOME/.local/share/fonts/monospace"
 echo "[*] Refreshing font cache…"
 fc-cache -f
 
+echo "[*] Coping the wallpaper"
+mkdir -p "$HOME/Pictures/wallpapers/"
+cp ./wallpapers/windows-xp-bliss.jpg "$HOME/Pictures/wallpapers/"
+
 echo "[✓] Done."
 
