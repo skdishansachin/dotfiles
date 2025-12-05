@@ -1,0 +1,54 @@
+# https://github.com/i3/i3status/blob/main/etc/i3status.conf
+# https://github.com/i3/i3status/commit/c8e1c19f56d214002692036765ef48ffe2954dc9
+
+general {
+        colors = true
+        interval = 5
+}
+
+order += "ipv6"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+order += "disk /"
+order += "memory"
+order += "tztime local"
+order += "volume master"
+
+# you can add the ip address with `%ip`
+wireless _first_ {
+        format_up = "W: (%quality at %essid)"
+        format_down = "W: down"
+}
+
+ethernet _first_ {
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+battery all {
+        format = "%status %percentage %remaining"
+}
+
+disk "/" {
+        format = "D: %avail"
+}
+
+memory {
+        format = "%used / %available"
+        threshold_degraded = "1G"
+        format_degraded = "MEMORY < %available"
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+}
+
+volume master {
+    format = "V: %volume "
+    format_muted = "V: Muted (%volume)"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
