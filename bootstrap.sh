@@ -7,7 +7,7 @@ sudo apt -y upgrade
 
 echo "[*] Installing base packages…"
 sudo apt install -y \
-    git curl tmux jq stow neovim zoxide fzf ripgrep poppler-utils
+    git curl tmux jq stow alacritty neovim zoxide fzf ripgrep poppler-utils
 
 echo
 echo "[*] Desktop Environment Selection"
