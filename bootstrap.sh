@@ -22,7 +22,7 @@ case "$choice" in
         ;;
     2)
         echo "[*] Installing KDE packages…"
-        # sudo apt install -y
+	echo "NOT YET IMPLEMENTED!"
 	;;
     *)
         echo "Invalid choice. Exiting."
