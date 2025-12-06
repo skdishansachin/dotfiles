@@ -35,5 +35,5 @@ echo "[*] Coping the wallpaper"
 mkdir -p "$HOME/Pictures/wallpapers/"
 cp ./wallpapers/windows-xp-bliss.jpg "$HOME/Pictures/wallpapers/"
 
-echo "[✓] Done."
+echo "[*] Done."
 
