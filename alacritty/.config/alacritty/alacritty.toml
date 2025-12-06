@@ -18,5 +18,5 @@ family = "JetBrains Mono"
 style = "Bold Italic"
 
 [general]
-import = ["~/.config/alacritty/themes/moonfly.toml"]
+import = ["~/.config/alacritty/themes/linux.toml"]
 
