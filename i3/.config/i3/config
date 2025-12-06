@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Monospace 9
+font pango:JetBrains Mono 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
