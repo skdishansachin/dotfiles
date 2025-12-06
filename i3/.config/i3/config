@@ -49,7 +49,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -155,10 +155,10 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-assign [class="xterm"] 1
+assign [class="alacritty"] 1
 assign [class="firefox-esr"] 2
 
-exec --no-startup-id xterm
+exec --no-startup-id alacritty
 exec --no-startup-id firefox
 
 # reload the configuration file
