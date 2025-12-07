@@ -2,19 +2,19 @@
 size = 12
 
 [font.normal]
-family = "Jetbrains Mono"
+family = "JetBrains Mono"
 style = "Regular"
 
 [font.bold]
-family = "Jetbrains Mono"
+family = "JetBrains Mono"
 style = "Bold"
 
 [font.italic]
-family = "Jetbrains Mono"
+family = "JetBrains Mono"
 style = "Italic"
 
 [font.bold_italic]
-family = "Jetbrains Mono"
+family = "JetBrains Mono"
 
 [general]
 import = ["~/.config/alacritty/themes/xterm.toml"]
