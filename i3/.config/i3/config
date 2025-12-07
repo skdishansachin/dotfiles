@@ -37,9 +37,9 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
 # screenshots
-exec --no-startup-id flameshot &
-bindsym Print exec flameshot full -p ~/Pictures/Screenshots/
-bindsym Shift+Print exec flameshot gui
+# exec --no-startup-id flameshot &
+# bindsym Print exec flameshot full -p ~/Pictures/Screenshots/
+# bindsym Shift+Print exec flameshot gui
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
