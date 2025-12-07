@@ -17,12 +17,3 @@ Each package corresponds to a folder containing the files to be symlinked.
 
 **Official Documentation for GNU Stow** - https://www.gnu.org/software/stow/
 
-## Setting up a new machine?
-
-### Intall
-
-You can just run the `./install.sh` script to install the other softwares and font I use.
-
-### Font
-
-I was using system Monospace font which alies to "DejaVu Sans Mono".
