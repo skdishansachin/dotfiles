@@ -107,21 +107,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 test -r '/home/skdishansachin/.opam/opam-init/init.sh' && . '/home/skdishansachin/.opam/opam-init/init.sh' > /dev/null 2> /dev/null || true
 
 eval $(opam env --switch=default)
 
-# export PATH=$PATH:$HOME/personal/hugo/v0.152.2;
-
-export PATH=$PATH:$HOME/personal/go/v1.25.4/bin;
-
 export PATH=$PATH:$HOME/.local/bin
-
-PS1='\[\e[96;1m\]\w\[\e[0m\]$(branch=$(git branch --show-current 2>/dev/null); [ -n "$branch" ] && echo " on \[\e[91;1m\]($branch)\[\e[0m\]")\n\[\e[92m\]❯ \[\e[0m\]'
 
 eval "$(zoxide init bash)"
