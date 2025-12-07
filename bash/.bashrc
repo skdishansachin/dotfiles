@@ -115,4 +115,6 @@ eval $(opam env --switch=default)
 
 export PATH=$PATH:$HOME/.local/bin
 
+eval "$(starship init bash)"
+
 eval "$(zoxide init bash)"
