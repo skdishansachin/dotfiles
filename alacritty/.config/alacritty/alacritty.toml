@@ -17,6 +17,6 @@ style = "Italic"
 family = "Monospace"
 style = "Bold Italic"
 
-[general]
-import = ["~/.config/alacritty/themes/linux.toml"]
+# [general]
+# import = ["~/.config/alacritty/themes/linux.toml"]
 
