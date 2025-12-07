@@ -1,4 +1,4 @@
-# Config
+# Dotfiles
 
 Personal configuration and dotfiles that managed with GNU Stow.
 
