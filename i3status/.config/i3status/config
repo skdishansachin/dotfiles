@@ -12,8 +12,8 @@ order += "ethernet _first_"
 order += "battery all"
 order += "disk /"
 order += "memory"
-order += "tztime local"
 order += "volume master"
+order += "tztime local"
 
 # you can add the ip address with `%ip`
 wireless _first_ {
@@ -40,12 +40,14 @@ memory {
         format_degraded = "MEMORY < %available"
 }
 
+volume master {
+    format = "♪ %volume"
+    format_muted = "♪ muted"
+    # max_volume = 100
+    device = "pulse"
+}
+
 tztime local {
         format = "%Y-%m-%d %H:%M:%S"
 }
 
-volume master {
-    format = "♪ %volume"
-    format_muted = "♪ muted"
-    device = "pulse"
-}
