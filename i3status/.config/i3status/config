@@ -41,10 +41,11 @@ memory {
 }
 
 volume master {
-    format = "♪ %volume"
-    format_muted = "♪ muted"
-    # max_volume = 100
-    device = "pulse"
+	device = "pulse"
+	mixer = "Master"
+	mixer_idx = 0
+	format = "♪ %volume"
+	format_muted = "♪ muted (%volume)"
 }
 
 tztime local {
