@@ -17,13 +17,13 @@ order += "tztime local"
 
 # you can add the ip address with `%ip`
 wireless _first_ {
-        format_up = "W: (%quality at %essid)"
-        format_down = "W: down"
+        format_up = "WIFI: (%quality at %essid)"
+        format_down = "WIFI: down"
 }
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+        format_up = "ETHERNET: %ip (%speed)"
+        format_down = "ETHERNET: down"
 }
 
 battery all {
@@ -31,11 +31,11 @@ battery all {
 }
 
 disk "/" {
-        format = "D: %avail"
+        format = "DISK: %avail"
 }
 
 memory {
-        format = "%used / %available"
+        format = "MEMORY: %used / %available"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
@@ -44,8 +44,8 @@ volume master {
 	device = "pulse"
 	mixer = "Master"
 	mixer_idx = 0
-	format = "♪ %volume"
-	format_muted = "♪ muted (%volume)"
+	format = "VOLUME: %volume"
+	format_muted = "VOLUME: muted (%volume)"
 }
 
 tztime local {
