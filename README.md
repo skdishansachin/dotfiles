@@ -4,10 +4,6 @@ Personal configuration and dotfiles that managed with symlinks.
 
 ## Usage
 
-Clone the repo into `~/config/` (or any directory), then run:
-
-### Dotfiles
-
 Here is example of how to symlinks the directories.
 
 ```sh
