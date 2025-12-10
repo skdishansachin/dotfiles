@@ -14,3 +14,6 @@ ln -s ~/dotfiles/nvim ~/.config
 
 I used to use stow but felt it's not needed when I can just use native symlinks so it did work and easy. Maybe you should try to!
 
+## Important!
+
+The `./bash` directory is not supposed to symlink, you have to source the `./bash/.bashrc` inside your `~/.bashrc`.
