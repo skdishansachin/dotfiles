@@ -1,6 +1,6 @@
 # Dotfiles
 
-Personal configuration and dotfiles that managed with GNU Stow.
+Personal configuration and dotfiles that managed with symlinks.
 
 ## Usage
 
@@ -8,12 +8,13 @@ Clone the repo into `~/config/` (or any directory), then run:
 
 ### Dotfiles
 
-```sh
-stow bash
-stow nvim
-stow starship
-```
-Each package corresponds to a folder containing the files to be symlinked.
+Here is example of how to symlinks the directories.
 
-**Official Documentation for GNU Stow** - https://www.gnu.org/software/stow/
+```sh
+ln -s ~/dotfiles/i3 ~/.config
+ln -s ~/dotfiles/alacritty ~/.config
+ln -s ~/dotfiles/nvim ~/.config
+```
+
+I used to use stow but felt it's not needed when I can just use native symlinks so it did work and easy. Maybe you should try to!
 
