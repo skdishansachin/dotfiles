@@ -109,6 +109,21 @@ return {
           --  the definition of its *type*, not where it was *defined*.
           map("grt", require("telescope.builtin").lsp_type_definitions, "[G]oto [T]ype Definition")
 
+          -- Show diagnostics for the current line in a floating window
+          map("<leader>e", function()
+            vim.diagnostic.open_float(nil, { focus = false })
+          end, "Show Line Diagnostics")
+
+          -- Jump to next error
+          map("[e", function()
+            vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+          end, "Previous Error")
+
+          -- Jump to previous error
+          map("]e", function()
+            vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
+          end, "Next Error")
+
           -- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
           ---@param client vim.lsp.Client
           ---@param method vim.lsp.protocol.Method
@@ -187,21 +202,6 @@ return {
           end,
         },
       })
-
-      -- Show diagnostics for the current line in a floating window
-      map("<leader>e", function()
-        vim.diagnostic.open_float(nil, { focus = false })
-      end, "Show Line Diagnostics")
-
-      -- Jump to next error
-      map("[e", function()
-        vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
-      end, "Previous Error")
-
-      -- Jump to previous error
-      map("]e", function()
-        vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
-      end, "Next Error")
 
       -- LSP servers and clients are able to communicate to each other what features they support.
       --  By default, Neovim doesn't support everything that is in the LSP specification.
