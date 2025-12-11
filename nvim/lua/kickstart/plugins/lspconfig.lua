@@ -188,6 +188,21 @@ return {
         },
       })
 
+      -- Show diagnostics for the current line in a floating window
+      map("<leader>e", function()
+        vim.diagnostic.open_float(nil, { focus = false })
+      end, "Show Line Diagnostics")
+
+      -- Jump to next error
+      map("[e", function()
+        vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+      end, "Previous Error")
+
+      -- Jump to previous error
+      map("]e", function()
+        vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
+      end, "Next Error")
+
       -- LSP servers and clients are able to communicate to each other what features they support.
       --  By default, Neovim doesn't support everything that is in the LSP specification.
       --  When you add blink.cmp, luasnip, etc. Neovim now has *more* capabilities.
