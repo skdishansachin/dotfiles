@@ -24,3 +24,6 @@ disabled = true
 
 [package]
 disabled = true
+
+[sudo]
+disabled = false
