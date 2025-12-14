@@ -52,4 +52,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { noremap = true, silent = true })
 
+vim.keymap.del("s", "<C-S>")
+vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { desc = "LSP signature help" })
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP hover docs" })
+
 -- vim: ts=2 sts=2 sw=2 et
