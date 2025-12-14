@@ -2,8 +2,7 @@ require("lazy").setup({
   defaults = {
     git = { timeout = 600 },
   },
-  -- "NMAC427/guess-indent.nvim",
-  require("kickstart.plugins.tokyonight"),
+  { "EdenEast/nightfox.nvim", priority = 1000, },
   require("kickstart.plugins.autopairs"),
   require("kickstart.plugins.telescope"),
   require("kickstart.plugins.lspconfig"),
