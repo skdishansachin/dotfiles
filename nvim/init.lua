@@ -17,8 +17,6 @@ require("lazy-bootstrap")
 
 require("lazy-plugins")
 
-require("language")
-
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",
   callback = function()
