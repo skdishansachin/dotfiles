@@ -2,7 +2,8 @@ require("lazy").setup({
   defaults = {
     git = { timeout = 600 },
   },
-  { "EdenEast/nightfox.nvim", priority = 1000, },
+  require("kickstart.plugins.tokyonight"),
+  require("kickstart.plugins.nightfox"),
   require("kickstart.plugins.autopairs"),
   require("kickstart.plugins.telescope"),
   require("kickstart.plugins.lspconfig"),
