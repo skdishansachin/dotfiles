@@ -1,7 +1,4 @@
 require("lazy").setup({
-  defaults = {
-    git = { timeout = 600 },
-  },
   require("kickstart.plugins.tokyonight"),
   require("kickstart.plugins.nightfox"),
   require("kickstart.plugins.autopairs"),
