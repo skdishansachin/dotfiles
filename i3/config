@@ -23,9 +23,6 @@ exec --no-startup-id nm-applet
 exec --no-startup-id flameshot
 bindsym Print exec flameshot gui
 
-# wallpaper
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/windows-xp-bliss.jpg
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && killall -USR1 i3status
