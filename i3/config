@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:JetBrains Mono 8
+font pango:JetBrainsMono Nerd Font 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -153,7 +153,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 assign [class="alacritty"] 1
-assign [class="firefox-esr"] 2
+assign [class="firefox"] 2
 
 exec --no-startup-id alacritty
 exec --no-startup-id firefox
