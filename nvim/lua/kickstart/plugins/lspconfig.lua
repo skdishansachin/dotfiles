@@ -159,6 +159,16 @@ return {
             },
           },
         },
+        ty = {
+          cmd = { "ty", "server" },
+          filetypes = { "python" },
+          root_dir = require("lspconfig").util.root_pattern(".git", "pyproject.toml", "setup.py"),
+          settings = {
+            ty = {
+              -- optional ty-specific language server settings
+            },
+          },
+        }
       }
 
       local ensure_installed = vim.tbl_keys(servers or {})
