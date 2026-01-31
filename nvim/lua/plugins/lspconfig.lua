@@ -160,13 +160,11 @@ return {
           },
         },
         ty = {
-          cmd = { "ty", "server" },
+          cmd = { "~/.local/bin/ty", "server" },
           filetypes = { "python" },
           root_dir = require("lspconfig").util.root_pattern(".git", "pyproject.toml", "setup.py"),
           settings = {
-            ty = {
-              -- optional ty-specific language server settings
-            },
+            ty = {},
           },
         }
       }
