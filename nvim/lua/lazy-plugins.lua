@@ -4,7 +4,6 @@ require("lazy").setup({
   require("plugins.telescope"),
   require("plugins.lspconfig"),
   require("plugins.blink-cmp"),
-  require("plugins.mini"),
   require("plugins.treesitter"),
   require("plugins.neo-tree"),
   require("plugins.multicursor"),
