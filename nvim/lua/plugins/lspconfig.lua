@@ -41,36 +41,12 @@ return {
       })
       vim.lsp.enable("lua_ls")
 
-      vim.lsp.config("ty", {
-        cmd = { "/home/sk/.local/bin/ty", "server" },
-        filetypes = { "python" },
-        root_dir = util.root_pattern(".git", "pyproject.toml", "setup.py"),
-        settings = {},
-        capabilities = capabilities,
-      })
       vim.lsp.enable("ty")
-
-      vim.lsp.config("ts_ls", {
-        cmd = { "typescript-language-server", "--stdio" },
-        capabilities = capabilities,
-        filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
-        root_dir = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
-        settings = {
-          typescript = { inlayHints = { includeInlayParameterNameHints = "all" } },
-          javascript = { inlayHints = { includeInlayParameterNameHints = "all" } },
-        }
-      })
       vim.lsp.enable("ts_ls")
-
-
-      vim.lsp.config("gopls", {
-        cmd = { "gopls" },
-        capabilities = capabilities,
-        filetypes = { "go", "gomod" },
-        root_dir = util.root_pattern("go.mod", ".git"),
-        settings = {},
-      })
+      -- vim.lsp.enable('csharp_ls')
+      vim.lsp.enable('omnisharp')
       vim.lsp.enable("gopls")
+      vim.lsp.enable('rust_analyzer')
 
       -- LspAttach autocmd + keymaps
       vim.api.nvim_create_autocmd("LspAttach", {

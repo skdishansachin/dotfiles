@@ -9,7 +9,6 @@ require("lazy").setup({
   require("plugins.treesitter"),
   require("plugins.neo-tree"),
   require("plugins.multicursor"),
-  require("plugins.rustaceanvim"),
   require("plugins.comments"),
   require("plugins.conform"),
 }, {
