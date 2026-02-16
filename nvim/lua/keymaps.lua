@@ -19,4 +19,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { desc = "LSP signature help" })
 
+vim.api.nvim_create_user_command('LspInfo', ':checkhealth vim.lsp', { desc = 'Alias to `:checkhealth vim.lsp`' })
 -- vim: ts=2 sts=2 sw=2 et
