@@ -1,14 +1,5 @@
 return {
   {
-    "folke/lazydev.nvim",
-    ft = "lua",
-    opts = {
-      library = {
-        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-      },
-    },
-  },
-  {
     "neovim/nvim-lspconfig",
     dependencies = {
       { "j-hui/fidget.nvim", opts = {} },
@@ -21,7 +12,7 @@ return {
       local util = require("lspconfig.util")
 
       vim.lsp.config("lua_ls", {
-        cmd = { "/home/sk/.local/share/lua-language-server/bin/lua-language-server" },
+        cmd = { "lua-language-server" },
         capabilities = capabilities,
         root_dir = util.root_pattern(".git"),
         settings = {
@@ -31,24 +22,13 @@ return {
               globals = { "vim" },
             },
             workspace = {
-              library = {
-                [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                [vim.fn.expand("~/.config/nvim/lua")] = true,
-              },
-            },
+              library = vim.api.nvim_get_runtime_file("", true), },
           },
         }
       })
-      vim.lsp.enable("lua_ls")
 
-      vim.lsp.enable("ty")
-      vim.lsp.enable("ts_ls")
-      -- vim.lsp.enable('csharp_ls')
-      vim.lsp.enable('omnisharp')
-      vim.lsp.enable("gopls")
-      vim.lsp.enable('rust_analyzer')
+      vim.lsp.enable({ "lua_ls", "ty", "rust_analyzer" })
 
-      -- LspAttach autocmd + keymaps
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
         callback = function(event)
