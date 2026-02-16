@@ -3,7 +3,6 @@ require("lazy").setup({
   require("plugins.telescope"),
   require("plugins.treesitter"),
   require("plugins.neo-tree"),
-  require("plugins.multicursor"),
   require("plugins.comments"),
 }, {
   ui = {
