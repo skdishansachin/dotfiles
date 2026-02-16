@@ -2,6 +2,7 @@ require("lazy").setup({
   require("plugins.tokyonight"),
   require("plugins.telescope"),
   require("plugins.treesitter"),
+  require("plugins.mini"),
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {},
