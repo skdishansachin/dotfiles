@@ -1,0 +1,15 @@
+---@brief
+---
+--- https://github.com/astral-sh/ty
+--- https://github.com/neovim/nvim-lspconfig/commit/bb8121206c01d08da447c6fca70c756e76d6d31f
+---
+--- A Language Server Protocol implementation for ty, an extremely fast Python type checker and language server, written in Rust.
+---
+--- For installation instructions, please refer to the [ty documentation](https://github.com/astral-sh/ty/blob/main/README.md#getting-started).
+
+---@type vim.lsp.Config
+return {
+  cmd = { 'ty', 'server' },
+  filetypes = { 'python' },
+  root_markers = { 'ty.toml', 'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt', '.git' },
+}
