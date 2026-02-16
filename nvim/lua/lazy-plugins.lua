@@ -5,7 +5,6 @@ require("lazy").setup({
   require("plugins.neo-tree"),
   require("plugins.multicursor"),
   require("plugins.comments"),
-  require("plugins.conform"),
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {},
