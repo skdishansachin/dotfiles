@@ -1,6 +1,5 @@
 require("lazy").setup({
   require("plugins.tokyonight"),
-  require("plugins.autopairs"),
   require("plugins.telescope"),
   require("plugins.lspconfig"),
   require("plugins.blink-cmp"),
