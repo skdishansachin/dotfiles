@@ -68,16 +68,16 @@
 ---
 
 local root_markers1 = {
-  '.emmyrc.json',
-  '.luarc.json',
-  '.luarc.jsonc',
+  ".emmyrc.json",
+  ".luarc.json",
+  ".luarc.jsonc",
 }
 local root_markers2 = {
-  '.luacheckrc',
-  '.stylua.toml',
-  'stylua.toml',
-  'selene.toml',
-  'selene.yml',
+  ".luacheckrc",
+  ".stylua.toml",
+  "stylua.toml",
+  "selene.toml",
+  "selene.yml",
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -85,20 +85,20 @@ capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
 
 ---@type vim.lsp.Config
 return {
-  cmd = { 'lua-language-server' },
-  filetypes = { 'lua' },
+  cmd = { "lua-language-server" },
+  filetypes = { "lua" },
   capabilities = capabilities,
-  root_markers = vim.fn.has('nvim-0.11.3') == 1 and { root_markers1, root_markers2, { '.git' } }
-      or vim.list_extend(vim.list_extend(root_markers1, root_markers2), { '.git' }),
+  root_markers = vim.fn.has("nvim-0.11.3") == 1 and { root_markers1, root_markers2, { ".git" } }
+    or vim.list_extend(vim.list_extend(root_markers1, root_markers2), { ".git" }),
   settings = {
     Lua = {
       completion = { callSnippet = "Replace" },
       codeLens = { enable = true },
-      hint = { enable = true, semicolon = 'Disable' },
+      hint = { enable = true, semicolon = "Disable" },
       diagnostics = {
         globals = { "vim" },
       },
     },
-    workspace = { library = vim.api.nvim_get_runtime_file("", true), },
+    workspace = { library = vim.api.nvim_get_runtime_file("", true) },
   },
 }

@@ -15,7 +15,7 @@ return {
         "query",
         "vim",
         "vimdoc",
-        "xml"
+        "xml",
       },
       auto_install = true,
       highlight = {

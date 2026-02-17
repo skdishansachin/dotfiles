@@ -52,9 +52,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
       desc = "Next Error",
     })
     vim.keymap.set("n", "<leader>th", function()
-      vim.lsp.inlay_hint.enable(
-        not vim.lsp.inlay_hint.is_enabled({ bufnr = buf })
-      )
+      vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = buf }))
     end, {
       buffer = buf,
       desc = "[T]oggle Inlay [H]ints",
@@ -66,6 +64,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
-vim.api.nvim_create_user_command('LspInfo', ':checkhealth vim.lsp', { desc = 'Alias to `:checkhealth vim.lsp`' })
+vim.api.nvim_create_user_command("LspInfo", ":checkhealth vim.lsp", { desc = "Alias to `:checkhealth vim.lsp`" })
 
 -- vim: ts=2 sts=2 sw=2 et

@@ -12,8 +12,8 @@ capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
 
 ---@type vim.lsp.Config
 return {
-  cmd = { 'ty', 'server' },
-  filetypes = { 'python' },
+  cmd = { "ty", "server" },
+  filetypes = { "python" },
   capabilities = capabilities,
-  root_markers = { 'ty.toml', 'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt', '.git' },
+  root_markers = { "ty.toml", "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", ".git" },
 }
