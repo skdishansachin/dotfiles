@@ -53,10 +53,24 @@ local function is_library(fname)
   end
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
+
+capabilities.experimental = {
+  serverStatusNotification = true,
+  commands = {
+    commands = {
+      'rust-analyzer.showReferences',
+      'rust-analyzer.runSingle',
+      'rust-analyzer.debugSingle',
+    },
+  },
+}
 ---@type vim.lsp.Config
 return {
   cmd = { 'rust-analyzer' },
   filetypes = { 'rust' },
+  capabilities = capabilities,
   root_dir = function(bufnr, on_dir)
     local fname = vim.api.nvim_buf_get_name(bufnr)
     local reused_dir = is_library(fname)
@@ -103,18 +117,6 @@ return {
       end
     end)
   end,
-  capabilities = {
-    experimental = {
-      serverStatusNotification = true,
-      commands = {
-        commands = {
-          'rust-analyzer.showReferences',
-          'rust-analyzer.runSingle',
-          'rust-analyzer.debugSingle',
-        },
-      },
-    },
-  },
   settings = {
     ['rust-analyzer'] = {
       lens = {

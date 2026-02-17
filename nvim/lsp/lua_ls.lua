@@ -80,10 +80,14 @@ local root_markers2 = {
   'selene.yml',
 }
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
+
 ---@type vim.lsp.Config
 return {
   cmd = { 'lua-language-server' },
   filetypes = { 'lua' },
+  capabilities = capabilities,
   root_markers = vim.fn.has('nvim-0.11.3') == 1 and { root_markers1, root_markers2, { '.git' } }
       or vim.list_extend(vim.list_extend(root_markers1, root_markers2), { '.git' }),
   settings = {
