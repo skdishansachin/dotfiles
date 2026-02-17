@@ -1,24 +1,16 @@
--- Set <space> as the leader key
--- See `:help mapleader`
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
--- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
 require("options")
-
 require("keymaps")
-
 require("lazy-bootstrap")
-
 require("lazy-plugins")
-
-vim.cmd("colorscheme tokyonight-night")
 
 vim.lsp.enable({ "lua_ls", "ty", "rust_analyzer" })
 
--- diagnostic config
+vim.cmd("colorscheme tokyonight-night")
+
 vim.diagnostic.config({
   severity_sort = true,
   float = { border = "rounded", source = "if_many", max_width = 80, wrap = true },
