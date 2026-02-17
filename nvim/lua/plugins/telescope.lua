@@ -37,6 +37,12 @@ return {
     vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
     vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
     vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
+    vim.keymap.set("grr", builtin.lsp_references, "[G]oto [R]eferences")
+    vim.keymap.set("gri", builtin.lsp_implementations, "[G]oto [I]mplementation")
+    vim.keymap.set("grd", builtin.lsp_definitions, "[G]oto [D]efinition")
+    vim.keymap.set("gO", builtin.lsp_document_symbols, "Open Document Symbols")
+    vim.keymap.set("gW", builtin.lsp_dynamic_workspace_symbols, "Open Workspace Symbols")
+    vim.keymap.set("grt", builtin.lsp_type_definitions, "[G]oto [T]ype Definition")
   end,
 }
 -- vim: ts=2 sts=2 sw=2 et
