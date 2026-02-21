@@ -7,12 +7,8 @@ return {
   cmd = {
     "roslyn-language-server",
     "--logLevel",
-    "Information",
+    "Trace",
     "--extensionLogDirectory=" .. vim.fs.dirname(vim.lsp.log.get_filename()),
-    "--extension",
-    "Microsoft.CodeAnalysis.Features.dll",
-    "--extension",
-    "Microsoft.CodeAnalysis.CSharp.Features.dll",
     "--autoLoadProjects",
     "--stdio",
   },
