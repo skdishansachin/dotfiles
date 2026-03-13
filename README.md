@@ -1,19 +1,37 @@
 # Dotfiles
 
-Personal configuration and dotfiles that managed with symlinks.
+Personal configuration for Arch Linux, following XDG conventions and managed with symlinks.
 
-## Usage
+## Included Configurations
 
-Here is example of how to symlinks the directories.
+- **Alacritty**: A cross-platform, GPU-accelerated terminal emulator.
+- **i3**: A tiling window manager for X11.
+- **i3status**: A status bar for i3.
+- **Neovim**: A powerful text editor, configured with `lazy.nvim`.
+- **Tmux**: A terminal multiplexer for managing multiple sessions.
+
+## Structure and Symlinks
+
+All configurations are designed to be symlinked to their respective locations in `~/.config`.
+
+| Source Directory | Target Location |
+| :--- | :--- |
+| `alacritty/` | `~/.config/alacritty` |
+| `i3/` | `~/.config/i3` |
+| `i3status/` | `~/.config/i3status` |
+| `nvim/` | `~/.config/nvim` |
+| `tmux/` | `~/.config/tmux` |
+
+### Usage Example
+
+To symlink these configurations, you can use the `ln -s` command:
 
 ```sh
-ln -s ~/dotfiles/i3 ~/.config
 ln -s ~/dotfiles/alacritty ~/.config
+ln -s ~/dotfiles/i3 ~/.config
+ln -s ~/dotfiles/i3status ~/.config
 ln -s ~/dotfiles/nvim ~/.config
+ln -s ~/dotfiles/tmux ~/.config
 ```
 
-I used to use stow but felt it's not needed when I can just use native symlinks so it did work and easy. Maybe you should try to!
-
-## Important!
-
-The `./bash` directory is not supposed to symlink, you have to source the `./bash/.bashrc` inside your `~/.bashrc`.
+> **Note:** Ensure the target directories in `~/.config` do not already exist before creating the symlinks.
