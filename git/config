@@ -1,0 +1,30 @@
+[alias]
+	amend = commit --amend --no-edit
+	ba = branch --all
+	br = branch
+	cm = commit -m
+	co = switch
+	cob = switch -c
+	discard = restore
+	last = log -1 HEAD
+	lg = log --oneline --graph --decorate --all
+	pf = push --force-with-lease
+	s = status
+	st = status --short
+	unstage = restore --staged
+	up = pull --rebase --prune
+	wip = !git add -A && git commit -m 'WIP'
+
+[color]
+	ui = auto
+
+[core]
+	autocrlf = input
+	editor = nvim
+
+[init]
+	defaultBranch = main
+
+[user]
+	email = skdishansachin@noreply.codeberg.org
+	name = skdishansachin
