@@ -1,0 +1,10 @@
+[font]
+size = 14
+
+[font.normal]
+family = "Iosevka Nerd Font Propo"
+style = "Regular"
+
+[general]
+import = ["xterm.toml"]
+
