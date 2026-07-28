@@ -10,34 +10,12 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 vim.pack.add({
-  { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
   { src = "https://github.com/nvim-mini/mini.nvim", version = "stable" },
   { src = "https://github.com/saghen/blink.cmp", version = "v1" },
   { src = "https://github.com/folke/tokyonight.nvim", version = "stable" },
 })
 
 vim.cmd("colorscheme tokyonight-night")
-
-require("nvim-treesitter").setup({
-  ensure_installed = {
-    "bash",
-    "c",
-    "diff",
-    "html",
-    "lua",
-    "luadoc",
-    "markdown",
-    "markdown_inline",
-    "query",
-    "vim",
-    "vimdoc",
-    "xml",
-    "zig",
-  },
-  auto_install = true,
-  highlight = { enable = true },
-  indent = { enable = true, disable = { "xml" } },
-})
 
 require("mini.comment").setup()
 require("mini.pairs").setup()
