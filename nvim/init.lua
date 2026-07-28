@@ -64,14 +64,12 @@ local extra = require("mini.extra")
 local map = vim.keymap.set
 
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
-map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic quickfix list" })
 
 map("n", "<leader>h", pick.builtin.help, { desc = "Search [H]elp" })
 map("n", "<leader>k", extra.pickers.keymaps, { desc = "Search [K]eymaps" })
 map("n", "<leader>f", pick.builtin.files, { desc = "Search [F]iles" })
 map("n", "<leader>w", pick.builtin.grep, { desc = "Search current [W]ord" })
 map("n", "<leader>g", pick.builtin.grep_live, { desc = "Search by [G]rep" })
-map("n", "<leader>d", extra.pickers.diagnostic, { desc = "Search [D]iagnostics" })
 map("n", "<leader>r", pick.builtin.resume, { desc = "Search [R]esume" })
 map("n", "<leader>s.", extra.pickers.oldfiles, { desc = 'Search Recent Files ("." for repeat)' })
 map("n", "<leader><leader>", pick.builtin.buffers, { desc = "[ ] Find existing buffers" })
@@ -87,18 +85,6 @@ map("n", "<leader>ss", function()
     },
   })
 end, { desc = "[S]earch [S]elect Picker" })
-
-map("n", "<leader>e", function()
-  vim.diagnostic.open_float(nil, { focus = false })
-end, { desc = "Show Line Diagnostics" })
-
-map("n", "[e", function()
-  vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
-end, { desc = "Previous Error" })
-
-map("n", "]e", function()
-  vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
-end, { desc = "Next Error" })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking text",
