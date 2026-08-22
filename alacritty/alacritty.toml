@@ -8,3 +8,6 @@ style = "Regular"
 [general]
 import = ["xterm.toml"]
 
+[window]
+opacity = 0.92
+padding = { x = 10, y = 10 }
