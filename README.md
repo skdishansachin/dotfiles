@@ -13,3 +13,11 @@ ln -s ~/config/hypr ~/.config
 ```
 
 > **Note:** Ensure the target directories in `~/.config` do not already exist before creating the symlinks.
+
+### Packages
+
+After a fresh install, run:
+
+```sh
+sudo pacman -S hyprland hyprlauncher hyprlock hyprpaper hyprshutdown quickshell brightnessctl playerctl pipewire alacritty neovim thunar ripgrep github-cli grim satty ristretto mupdf adwaita-fonts ttf-iosevka-nerd
+```
