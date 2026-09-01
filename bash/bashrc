@@ -1,0 +1,17 @@
+# You need bash_completion and bat installed
+
+[[ $- != *i* ]] && return
+
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+elif [ -f /usr/local/etc/bash_completion ]; then
+    . /usr/local/etc/bash_completion
+fi
+
+PS1='[\u@\h \W]\$ '
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
+
+alias vim="nvim"
+alias cat="bat --style=plain --paging=never"
