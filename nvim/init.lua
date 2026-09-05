@@ -15,13 +15,6 @@ vim.pack.add({
   { src = "https://github.com/folke/tokyonight.nvim", version = "stable" },
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "asm", "cpp", "typst" },
-  callback = function(args)
-    vim.treesitter.start(args.buf)
-  end,
-})
-
 vim.cmd("colorscheme tokyonight-night")
 
 require("mini.pairs").setup()
