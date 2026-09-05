@@ -1,8 +1,8 @@
 # Binaries / generated - do not commit
 *.so
+# Wallpapers live in personal storage, not in git
+hypr/wallpaper.jpg
 hypr/wallpapers/
 nvim/parser/
 nvim/queries/
 
-# Keep the single active wallpaper
-!hypr/wallpaper.jpg
