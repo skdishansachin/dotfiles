@@ -1,0 +1,8 @@
+# Binaries / generated - do not commit
+*.so
+hypr/wallpapers/
+nvim/parser/
+nvim/queries/
+
+# Keep the single active wallpaper
+!hypr/wallpaper.jpg
