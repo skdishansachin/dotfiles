@@ -38,62 +38,15 @@ PanelWindow {
     property bool isMuted: Pipewire.defaultAudioSink?.audio?.muted ?? false
     property string networkName: "disconnected"
     property string networkType: ""
-    property int brightness: 0
+    property string brightness: (Backlight.ready ? `${Backlight.brightness}` : "?")
 
     SystemClock {
         id: clock
         precision: SystemClock.Minutes
     }
 
-    // Binds the default sink so its audio.volume / audio.muted stay populated.
     PwObjectTracker {
         objects: [Pipewire.defaultAudioSink]
-    }
-
-    Timer {
-        interval: 3000
-        running: true
-        repeat: true
-        triggeredOnStart: true
-        onTriggered: networkPoll.running = true
-    }
-
-    Timer {
-        interval: 2000
-        running: true
-        repeat: true
-        triggeredOnStart: true
-        onTriggered: brightnessPoll.running = true
-    }
-
-    Process {
-        id: networkPoll
-        command: ["sh", "-c", "nmcli -t -f TYPE,STATE,NAME connection show --active | head -1"]
-        stdout: SplitParser {
-            onRead: data => {
-                if (!data) return;
-                const parts = data.split(":");
-                if (parts.length >= 3 && parts[1] === "activated") {
-                    root.networkType = parts[0].trim();
-                    root.networkName = parts.slice(2).join(":").trim() || "disconnected";
-                } else {
-                    root.networkType = "";
-                    root.networkName = "disconnected";
-                }
-            }
-        }
-    }
-
-    Process {
-        id: brightnessPoll
-        command: ["brightnessctl", "-m"]
-        stdout: SplitParser {
-            onRead: data => {
-                if (!data) return;
-                const parts = data.split(",");
-                if (parts.length >= 4) root.brightness = parseInt(parts[3]);
-            }
-        }
     }
 
     function toRoman(num) {
@@ -181,8 +134,8 @@ PanelWindow {
             }
 
             StatusBlock {
-                icon: root.networkType === "wifi" || root.networkType.includes("wireless") ? "\uf1eb" : "\uf6ff"
-                value: root.networkName
+		icon: Network.type === "wifi" ? "\uf1eb" : "\uf1eb"
+                value: Network.name
                 maxValueWidth: 160
             }
 
