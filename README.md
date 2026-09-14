@@ -1,6 +1,6 @@
 # config
 
-Personal configuration for Arch Linux, following XDG conventions and managed with symlinks.
+Personal configuration for Arch Linux managed with symlinks.
 
 ### Usage
 
