@@ -9,10 +9,18 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+vim.o.completeopt = "menu,menuone,noselect,popup,fuzzy,nearest"
+vim.o.complete = ".,w,b,u"
+vim.o.autocomplete = true
+vim.o.pumheight = 12
+vim.o.pummaxwidth = 40
+vim.o.pumborder = "single"
+vim.o.pumblend = 0
+vim.opt.shortmess:append("c")
+
 vim.pack.add({
   { src = "https://github.com/nvim-mini/mini.pick", version = "stable" },
   { src = "https://github.com/nvim-mini/mini.move", version = "stable" },
-  { src = "https://github.com/saghen/blink.cmp", version = "v1" },
   { src = "https://github.com/folke/tokyonight.nvim", version = "stable" },
 })
 
@@ -38,28 +46,18 @@ require("mini.pick").setup({
 })
 require("mini.move").setup()
 
-require("blink.cmp").setup({
-  keymap = { preset = "default" },
-  appearance = {
-    nerd_font_variant = "mono",
-  },
-  completion = {
-    documentation = { auto_show = true },
-    menu = { auto_show = true },
-  },
-  sources = {
-    default = { "path", "snippets", "buffer" },
-  },
-  fuzzy = {
-    implementation = "lua",
-  },
-})
-
 local pick = require("mini.pick")
 
 local map = vim.keymap.set
 
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
+
+map("i", "<Tab>", function()
+  return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>"
+end, { expr = true, desc = "Next completion / Tab" })
+map("i", "<S-Tab>", function()
+  return vim.fn.pumvisible() == 1 and "<C-p>" or "<S-Tab>"
+end, { expr = true, desc = "Prev completion" })
 
 map("n", "<leader>h", pick.builtin.help, { desc = "Search [H]elp" })
 map("n", "<leader>f", pick.builtin.files, { desc = "Search [F]iles" })
