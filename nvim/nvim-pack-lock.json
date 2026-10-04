@@ -1,10 +1,5 @@
 {
   "plugins": {
-    "blink.cmp": {
-      "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
-      "src": "https://github.com/saghen/blink.cmp",
-      "version": "'v1'"
-    },
     "mini.move": {
       "rev": "b9e452f9c83565a1520e14f7531632160f3b0170",
       "src": "https://github.com/nvim-mini/mini.move",
