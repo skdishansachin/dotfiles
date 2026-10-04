@@ -21,7 +21,6 @@ vim.opt.shortmess:append("c")
 vim.pack.add({
   { src = "https://github.com/nvim-mini/mini.pick", version = "stable" },
   { src = "https://github.com/nvim-mini/mini.move", version = "stable" },
-  { src = "https://github.com/folke/tokyonight.nvim", version = "stable" },
 })
 
 vim.cmd("colorscheme tokyonight-night")
