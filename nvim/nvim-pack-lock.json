@@ -9,11 +9,6 @@
       "rev": "8c1f75f8ddd8c9f75d07ed2ab5718d2c3cb65a66",
       "src": "https://github.com/nvim-mini/mini.pick",
       "version": "'stable'"
-    },
-    "tokyonight.nvim": {
-      "rev": "545d72cde6400835d895160ecb5853874fd5156d",
-      "src": "https://github.com/folke/tokyonight.nvim",
-      "version": "'stable'"
     }
   }
 }
