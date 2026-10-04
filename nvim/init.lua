@@ -20,7 +20,6 @@ vim.opt.shortmess:append("c")
 
 vim.pack.add({
   { src = "https://github.com/nvim-mini/mini.pick", version = "stable" },
-  { src = "https://github.com/nvim-mini/mini.move", version = "stable" },
 })
 
 vim.cmd("colorscheme tokyonight-night")
@@ -43,8 +42,6 @@ require("mini.pick").setup({
     end,
   },
 })
-require("mini.move").setup()
-
 local pick = require("mini.pick")
 
 local map = vim.keymap.set
