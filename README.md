@@ -1,4 +1,4 @@
-# config
+# dotfiles
 
 Personal configuration for Arch Linux managed with symlinks.
 
@@ -7,9 +7,9 @@ Personal configuration for Arch Linux managed with symlinks.
 To symlink these configurations, you can use the `ln -s` command:
 
 ```sh
-ln -s ~/config/alacritty ~/.config
-ln -s ~/config/nvim ~/.config
-ln -s ~/config/hypr ~/.config
+ln -s ~/dotfiles/alacritty ~/.config
+ln -s ~/dotfiles/nvim ~/.config
+ln -s ~/dotfiles/hypr ~/.config
 ```
 
 > **Note:** Ensure the target directories in `~/.config` do not already exist before creating the symlinks.
