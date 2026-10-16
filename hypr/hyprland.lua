@@ -1,5 +1,4 @@
 local terminal    = "alacritty"
-local fileManager = "thunar"
 local menu        = "hyprlauncher"
 
 hl.monitor({
@@ -12,7 +11,6 @@ hl.monitor({
 hl.on("hyprland.start", function()
   hl.exec_cmd("quickshell")
   hl.exec_cmd(terminal)
-  hl.exec_cmd("hyprpaper")
   hl.exec_cmd(menu .. " -d")
 end)
 
@@ -56,6 +54,7 @@ hl.config({
     misc = {
         force_default_wallpaper = 0,
         disable_hyprland_logo   = true,
+        background_color = "rgb(000000)",
     },
 
     input = {
@@ -73,7 +72,6 @@ local mainMod = "SUPER"
 -- Core binds
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q",      hl.dsp.window.close())
-hl.bind(mainMod .. " + E",      hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + CTRL + L",      hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + D",      hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + R",      hl.dsp.exec_cmd("hyprctl reload"))
@@ -123,7 +121,7 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- Other
-hl.bind("Print", hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"'))
+hl.bind("Print", hl.dsp.exec_cmd('mkdir -p ~/Pictures/Screenshots && grim ~/Pictures/Screenshots/$(date +%Y%m%d_%H%M%S).png'))
 
 hl.window_rule({
     name  = "suppress-maximize-events",
