@@ -1,28 +1,17 @@
 # dotfiles
 
-Personal configuration for Arch Linux managed with symlinks.
+Personal configuration for Arch Linux.
 
 ### Usage
 
-To symlink these configurations, you can use the `ln -s` command:
-
 ```sh
-ln -s ~/dotfiles/alacritty ~/.config
-ln -s ~/dotfiles/nvim ~/.config
-ln -s ~/dotfiles/hypr ~/.config
+./scripts/install.sh
+./scripts/config.sh
 ```
 
-> **Note:** Ensure the target directories in `~/.config` do not already exist before creating the symlinks.
+`install.sh` installs post-installation packages with pacman (`--needed`).
+`config.sh` symlinks `alacritty`, `fontconfig`, `git`, `hypr`, `nvim` and
+`quickshell` into `${XDG_CONFIG_HOME:-$HOME/.config}`.
 
-## Thanks
+> **Note:** Existing targets are moved aside with a `.bk` suffix before linking.
 
-Thanks to these open source projects -
-
-- [Arch Linux](https://archlinux.org)
-- [Hyprland](https://hyprland.org)
-- [Quickshell](https://quickshell.org)
-- [Alacritty](https://alacritty.org)
-- [Neovim](https://neovim.io)
-- [Thunar](https://docs.xfce.org/xfce/thunar/start)
-- [Nerd Fonts](https://www.nerdfonts.com)
-- [Adwaita Fonts](https://gitlab.gnome.org/GNOME/adwaita-fonts)
