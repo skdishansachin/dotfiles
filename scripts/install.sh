@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# My post-installation package install script.
+# Fresh-machine setup: packages, paru, and Brave Origin.
 
 if ! command -v pacman >/dev/null 2>&1; then
   echo "error: pacman not found. This script is for Arch Linux only." >&2
@@ -37,5 +37,16 @@ sudo pacman -Syu
 
 echo "Installing packages..."
 sudo pacman -S --needed "${PACKAGES[@]}"
+
+echo "Installing paru..."
+sudo pacman -S --needed base-devel git
+
+tmpdir=$(mktemp -d)
+git clone https://aur.archlinux.org/paru-bin.git "$tmpdir/paru-bin"
+(cd "$tmpdir/paru-bin" && makepkg -si)
+rm -rf "$tmpdir"
+
+echo "Installing Brave Origin..."
+paru -S --needed brave-origin
 
 echo "Done."
