@@ -32,8 +32,6 @@ PanelWindow {
     implicitHeight: barHeight
     color: Qt.rgba(colorBackground.r, colorBackground.g, colorBackground.b, root.barOpacity)
 
-    BackgroundEffect.blurRegion: Region { item: root.contentItem }
-
     property int volume: Math.round((Pipewire.defaultAudioSink?.audio?.volume ?? 0) * 100)
     property bool isMuted: Pipewire.defaultAudioSink?.audio?.muted ?? false
     property string networkName: "disconnected"
