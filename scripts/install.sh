@@ -10,8 +10,8 @@ fi
 
 PACKAGES=(
   adwaita-fonts
-  alacritty
   bash-completion
+  ghsotty
   git
   grim
   hyprland

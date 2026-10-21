@@ -1,0 +1,6 @@
+theme = iTerm2 Default
+font-family = "Iosevka Nerd Font Propo"
+font-size  = 14
+cursor-style = block
+shell-integration-features = no-cursor
+cursor-style-blink = false
