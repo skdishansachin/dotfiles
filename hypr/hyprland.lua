@@ -1,4 +1,4 @@
-local terminal    = "alacritty"
+local terminal    = "ghostty"
 local menu        = "hyprlauncher"
 
 hl.monitor({
@@ -19,20 +19,19 @@ hl.env("HYPRCURSOR_SIZE", "24")
 
 hl.config({
     general = {
-        gaps_in  = 5,
-        gaps_out = 5,
         border_size = 1,
         col = {
             active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
             inactive_border = "rgba(595959aa)",
         },
+        gaps_in  = 3,
+        gaps_out = 3,
         layout = "dwindle",
     },
 
     decoration = {
-        rounding = 5,
         blur = {
-            enabled = true,
+            enabled = false,
         },
         shadow = {
             enabled = false,
@@ -54,12 +53,13 @@ hl.config({
     misc = {
         force_default_wallpaper = 0,
         disable_hyprland_logo   = true,
+        disable_splash_rendering = true,
         background_color = "rgb(000000)",
     },
 
     input = {
         kb_layout  = "us",
-        follow_mouse = 1,
+        follow_mouse = 0,
         sensitivity = 0,
         touchpad = {
             natural_scroll = true,
@@ -122,24 +122,5 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 -- Other
 hl.bind("Print", hl.dsp.exec_cmd('mkdir -p ~/Pictures/Screenshots && grim ~/Pictures/Screenshots/$(date +%Y%m%d_%H%M%S).png'))
-
-hl.window_rule({
-    name  = "suppress-maximize-events",
-    match = { class = ".*" },
-    suppress_event = "maximize",
-})
-
-hl.window_rule({
-    name  = "fix-xwayland-drags",
-    match = {
-        class      = "^$",
-        title      = "^$",
-        xwayland   = true,
-        float      = true,
-        fullscreen = false,
-        pin        = false,
-    },
-    no_focus = true,
-})
 
 -- vim: ts=4 sts=4 sw=4 et
