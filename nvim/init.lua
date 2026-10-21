@@ -12,11 +12,6 @@ vim.o.smartcase = true
 vim.o.completeopt = "menu,menuone,noselect,popup,fuzzy,nearest"
 vim.o.complete = ".,w,b,u"
 vim.o.autocomplete = true
-vim.o.pumheight = 12
-vim.o.pummaxwidth = 40
-vim.o.pumborder = "single"
-vim.o.pumblend = 0
-vim.opt.shortmess:append("c")
 
 vim.pack.add({
   { src = "https://github.com/nvim-mini/mini.pick", version = "stable" },
@@ -42,7 +37,6 @@ require("mini.pick").setup({
     end,
   },
 })
-local pick = require("mini.pick")
 
 local map = vim.keymap.set
 
@@ -55,31 +49,6 @@ map("i", "<S-Tab>", function()
   return vim.fn.pumvisible() == 1 and "<C-p>" or "<S-Tab>"
 end, { expr = true, desc = "Prev completion" })
 
-map("n", "<leader>h", pick.builtin.help, { desc = "Search [H]elp" })
-map("n", "<leader>f", pick.builtin.files, { desc = "Search [F]iles" })
-map("n", "<leader>w", pick.builtin.grep, { desc = "Search current [W]ord" })
-map("n", "<leader>g", pick.builtin.grep_live, { desc = "Search by [G]rep" })
-map("n", "<leader>r", pick.builtin.resume, { desc = "Search [R]esume" })
-map("n", "<leader><leader>", pick.builtin.buffers, { desc = "[ ] Find existing buffers" })
-
-map("n", "<leader>ss", function()
-  pick.start({
-    source = {
-      name = "Pickers",
-      items = { "files", "grep_live", "buffers", "help" },
-      choose = function(item)
-        pick.builtin[item]()
-      end,
-    },
-  })
-end, { desc = "[S]earch [S]elect Picker" })
-
-vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking text",
-  group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
-  callback = function()
-    vim.hl.on_yank()
-  end,
-})
+map("n", "<leader>f", require("mini.pick").builtin.files, { desc = "Search [F]iles" })
 
 -- vim: ts=2 sts=2 sw=2 et
