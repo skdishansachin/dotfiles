@@ -34,8 +34,6 @@ PanelWindow {
 
     property int volume: Math.round((Pipewire.defaultAudioSink?.audio?.volume ?? 0) * 100)
     property bool isMuted: Pipewire.defaultAudioSink?.audio?.muted ?? false
-    property string networkName: "disconnected"
-    property string networkType: ""
     property string brightness: (Backlight.ready ? `${Backlight.brightness}` : "?")
 
     SystemClock {
