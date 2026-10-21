@@ -17,7 +17,7 @@ vim.pack.add({
   { src = "https://github.com/nvim-mini/mini.pick", version = "stable" },
 })
 
-vim.cmd("colorscheme tokyonight-night")
+vim.cmd("colorscheme quiet")
 
 require("mini.pick").setup({
   source = {
