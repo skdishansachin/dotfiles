@@ -1,4 +1,5 @@
 local terminal    = "alacritty"
+local browser     = "brave-origin"
 local menu        = "hyprlauncher"
 
 hl.monitor({
@@ -71,6 +72,7 @@ local mainMod = "SUPER"
 
 -- Core binds
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + Q",      hl.dsp.window.close())
 hl.bind(mainMod .. " + CTRL + L",      hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + D",      hl.dsp.exec_cmd(menu))
