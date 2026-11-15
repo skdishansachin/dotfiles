@@ -29,7 +29,6 @@ PACKAGES=(
   qt6-declarative
   quickshell
   ttf-iosevka-nerd
-  tex-gyre-fonts
   wireplumber
 )
 
