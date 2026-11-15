@@ -29,6 +29,7 @@ PACKAGES=(
   qt6-declarative
   quickshell
   ttf-iosevka-nerd
+  tmux
   wireplumber
 )
 
