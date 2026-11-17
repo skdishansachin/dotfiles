@@ -11,7 +11,7 @@ PanelWindow {
 
     property color colorPrimary: "#BBBBBB"
     property color colorBackground: "#000000"
-    property real barOpacity: 0.80
+    property real barOpacity: 1
     property color colorAccent: "#33CCFF"
     property string fontFamily: "Iosevka Nerd Font Thin"
     property int fontSize: 13
