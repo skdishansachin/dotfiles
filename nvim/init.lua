@@ -9,7 +9,7 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.o.completeopt = "menu,menuone,noselect,popup,fuzzy,nearest"
+vim.o.completeopt = "menu,menuone,noselect,popup,fuzzy"
 vim.o.complete = ".,w,b,u"
 vim.o.autocomplete = true
 
