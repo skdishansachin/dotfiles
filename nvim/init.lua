@@ -17,6 +17,8 @@ vim.pack.add({
   { src = "https://github.com/nvim-mini/mini.pick", version = "stable" },
 })
 
+vim.o.termguicolors = true
+
 vim.cmd("colorscheme tokyonight-night")
 
 require("mini.pick").setup({
