@@ -1,9 +1,0 @@
-{
-  "plugins": {
-    "mini.pick": {
-      "rev": "8c1f75f8ddd8c9f75d07ed2ab5718d2c3cb65a66",
-      "src": "https://github.com/nvim-mini/mini.pick",
-      "version": "'stable'"
-    }
-  }
-}
