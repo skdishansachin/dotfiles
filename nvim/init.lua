@@ -12,23 +12,11 @@ vim.o.smartcase = true
 vim.o.completeopt = "menu,menuone,noselect,popup,fuzzy"
 vim.o.complete = ".,w,b,u"
 vim.o.autocomplete = true
-
-vim.pack.add({
-  { src = "https://github.com/nvim-mini/mini.pick", version = "stable" },
-})
-
 vim.o.termguicolors = true
 
 vim.cmd("colorscheme tokyonight-night")
 
-require("mini.pick").setup({
-  source = {
-    show = require("mini.pick").default_show,
-  }
-})
-
 local map = vim.keymap.set
-
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
 
 map("i", "<Tab>", function()
@@ -37,7 +25,4 @@ end, { expr = true, desc = "Next completion / Tab" })
 map("i", "<S-Tab>", function()
   return vim.fn.pumvisible() == 1 and "<C-p>" or "<S-Tab>"
 end, { expr = true, desc = "Prev completion" })
-
-map("n", "<leader>f", require("mini.pick").builtin.files, { desc = "Search [F]iles" })
-
 -- vim: ts=2 sts=2 sw=2 et
