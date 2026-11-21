@@ -1,0 +1,18 @@
+" mkdir -p ~/.local/share/vim/{undo,view,spell}
+" mkdir -p ~/.local/state/vim/{swap,backup}
+source $VIMRUNTIME/xdg.vim
+
+syntax on
+
+set nocompatible
+set termguicolors
+set number
+set relativenumber
+set clipboard=unnamed,unnamedplus   
+set completeopt+=fuzzy
+set undofile
+set ignorecase
+set smartcase
+set wildmenu
+
+let g:netrw_banner = 0   
